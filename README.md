@@ -62,7 +62,7 @@ python3 train.py
 ### Testing
 1. Download RASM2018 evaluation [dataset](https://www.primaresearch.org/RASM2018/)
 
-2. Run trained FCN to predict page segmentations of evaluation set.
+2. Run PageSegmentation.py to predict page segmentations of evaluation set.
 ```
 THEANO_FLAGS=device=cuda0 python3 PageSegmentation.py
 ```

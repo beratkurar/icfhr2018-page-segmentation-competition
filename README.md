@@ -1,4 +1,4 @@
-### Installations for running keras-theano on GPU
+## Installations for running keras-theano on GPU
 1. Upgrade pip and install opencv2
 ```
 cd ~
@@ -41,26 +41,22 @@ sudo ldconfig
 THEANO_FLAGS=device=cuda0 python3
 ```
 
-### How to run the project
-1. Create high dense train patches
+## How to run the project
+### Training
+1. Download RASM2018 example dataset
 ```
-cd hdata
-python3 HighDenseTrainPatchMaker.py
+wget https://www.dropbox.com/s/j4348fx4k7ow4zh/RASM2018_Example_Set.zip?dl=0
 ```
-2. Create validation and test patches
+2. Create labeled images
 ```
-cd ldata
-python3 ValidationPatchMaker.py
-python3 TestPatchMaker.py
+python3 parse_data.py
 ```
-3. Train FCN
+3. Create train patches
 ```
-THEANO_FLAGS=device=cuda0 python3 pagetrainf8.py
+python3 TrainPatchMaker.py
 ```
-4. Predict test pages
+4. Train FCN and save the best weights
 ```
-python3 pagepredictf8.py
+python3 train.py
 ```
-5. See the predictions in the folder called `out`.
-
 

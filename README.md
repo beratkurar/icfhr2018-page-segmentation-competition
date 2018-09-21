@@ -43,10 +43,8 @@ THEANO_FLAGS=device=cuda0 python3
 
 ## How to run the project
 ### Training
-1. Download RASM2018 example dataset
-```
-wget https://www.dropbox.com/s/j4348fx4k7ow4zh/RASM2018_Example_Set.zip?dl=0
-```
+1. Download [RASM2018 example dataset](https://www.dropbox.com/s/j4348fx4k7ow4zh/RASM2018_Example_Set.zip?dl=0)
+
 2. Create labeled images
 ```
 python3 parse_data.py
@@ -60,7 +58,7 @@ python3 TrainPatchMaker.py
 python3 train.py
 ```
 ### Testing
-1. Download RASM2018 evaluation [dataset](https://www.primaresearch.org/RASM2018/)
+1. Download [RASM2018 evaluation dataset](https://www.primaresearch.org/RASM2018/)
 
 2. Run PageSegmentation.py to predict page segmentations of evaluation set.
 ```

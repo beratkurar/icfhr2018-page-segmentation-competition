@@ -64,4 +64,3 @@ python3 train.py
 ```
 THEANO_FLAGS=device=cuda0 python3 PageSegmentation.py
 ```
-```

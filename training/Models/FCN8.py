@@ -1,8 +1,4 @@
 
-# https://github.com/wkentaro/pytorch-fcn/blob/master/torchfcn/models/fcn32s.py
-# fc weights into the 1x1 convs  , get_upsampling_weight 
-
-
 
 from keras.models import *
 from keras.layers import *
